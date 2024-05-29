@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <nav>
+            <div class="menu-item">
+                <a href="#" onclick="showAllMice()">Меню</a>
+                <div class="submenu">
+                    <a href="#" onclick="filterMice('game-mouse')">Ігрові миші</a>
+                    <a href="#" onclick="filterMice('regular-mouse')">Звичайні миші</a>
+                    <a href="#" onclick="filterMice('wireless-mouse')">Безпроводні миші</a>
+                </div>
+            </div>
+                <a href="#">Про нас</a> 
+                <a href="#">Спеціальні пропозиції</a>
+            </nav>
+        </div>
+
+        
+
+        <div class="logo">
+            <img src="https://www.freepnglogos.com/uploads/mouse-png/mouse-get-advice-richmond-39.png">
+        </div>
+
+        <div class="contact-info">
+            <p>Телефон: (044) 123-45-67</p>
+            <p>Email: info@onlineshop.com.ua</p>
+            <p>Адреса: Київ, вул. Хрещатик, 1</p>
+            <div class="social-links">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="shopping_cart">
+            <div class="shopping">
+                <img src="image/icon1.png">
+                <span class="quantity">0</span>
+            </div>
+        </div>
+        <div class="list">
+        </div>
+        <div class="cards">
+            <h1>Товари у кошику</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Закрити</div>
+            </div>
+        </div>
+    <div class="cards-container">
+        <div class="card game-mouse wireless-mouse" onclick="openModal('modal1')">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse1">
+            <h2>Назва товару 1</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(0)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(0)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse" onclick="openModal('modal2')">
+            <img src="https://images.unsplash.com/photo-1607677686474-ad91fc94f5ae?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse2">
+            <h2>Назва товару 2</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(1)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(1)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1616296425622-4560a2ad83de?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse3">
+            <h2>Назва товару 3</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details game-mouse">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(2)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(2)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1619334084350-b093f0a9b40e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse4">
+            <h2>Назва товару 4</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(3)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(3)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse">
+            <img src="https://images.unsplash.com/photo-1623425484828-7eccb29713a7?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse5">
+            <h2>Назва товару 5</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(4)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(4)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse">
+            <img src="https://images.unsplash.com/photo-1613141411244-0e4ac259d217?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse6">
+            <h2>Назва товару 6</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(5)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(5)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1563297007-0686b7003af7?q=80&w=1834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse7">
+            <h2>Назва товару 7</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(6)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(6)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse8">
+            <h2>Назва товару 8</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(7)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(7)">Додати в кошик</button>
+        </div>
+    
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1496878632226-93afc36151ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse9">
+            <h2>Назва товару 9</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(8)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(8)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse10">
+            <h2>Назва товару 10</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(9)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(9)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1551515300-2d3b7bb80920?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse11">
+            <h2>Назва товару 11</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(10)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(10)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1607677686474-ad91fc94f5ae?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse12">
+            <h2>Назва товару 12</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(11)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(11)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse">
+            <img src="https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse13">
+            <h2>Назва товару 13</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(12)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(12)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1625750188088-f6cd6756349c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse14">
+            <h2>Назва товару 14</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(13)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(13)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1632488507953-20bedb3b9602?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse15">
+            <h2>Назва товару 15</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(14)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(14)">Додати в кошик</button>
+        </div>
+        <div class="card game-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1586349906319-48d20e9d17e5?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse16">
+            <h2>Назва товару 16</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(15)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(15)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/flagged/photo-1561023367-4431103a484f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse17">
+            <h2>Назва товару 17</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(16)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(16)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1617233082866-9d9c58674778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse18">
+            <h2>Назва товару 18</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(17)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(17)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1611850698562-ae3d28934080?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse19">
+            <h2>Назва товару 19</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(18)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(18)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse wireless-mouse">
+            <img src="https://images.unsplash.com/photo-1590721337097-51802a791de3?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse20">
+            <h2>Назва товару 20</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(19)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(19)">Додати в кошик</button>
+        </div>
+        <div class="card regular-mouse">
+            <img src="https://images.unsplash.com/photo-1568886961933-d635c34531a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse21">
+            <h2>Назва товару 21</h2>
+            <p>В наявності</p>
+            <p>100 грн.</p>
+            <div class="product-details">
+                <p>Тип сенсора: Оптичний</p>
+                <p>DPI: до 12000</p>
+                <p>Кількість кнопок: 6</p>
+                <p>Тип підключення: Бездротове</p>
+                <p>Час роботи від батареї: до 50 годин</p>
+                <button onclick="addToCard(19)">Додати в кошик</button>
+            </div>
+            <button onclick="addToCard(19)">Додати в кошик</button>
+        </div>          
+    </div>
+    </main>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-flex">
+                <img class="modal-img" src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse1">
+                <div class="modal-info">
+                    <h2>Назва товару 1: Ігрова Миша ProGamer Z1</h2>
+                    <p><strong>Опис:</strong> Ігрова миша ProGamer Z1 забезпечує високу точність, швидку реакцію і комфортне використання під час тривалих ігрових сесій. Оснащена сучасним лазерним сенсором, програмованими кнопками та ергономічним дизайном.</p>
+                    <p><strong>Характеристики:</strong></p>
+                    <ul>
+                        <li>Тип сенсора: Лазерний</li>
+                        <li>Максимальне DPI: 16000</li>
+                        <li>Кількість програмованих кнопок: 9</li>
+                        <li>Тип підключення: USB</li>
+                        <li>Час роботи від батареї: до 48 годин</li>
+                        <li>Підсвітка: RGB з можливістю налаштування</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів. Експрес-доставка доступна за додаткову плату.</p>
+                    <button onclick="addToCard(0)">Додати в кошик</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-flex">
+                <img class="modal-img" src="https://images.unsplash.com/photo-1607677686474-ad91fc94f5ae?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse2">
+                <div class="modal-info">
+                    <h2>Назва товару 2: Ігрова Миша UltraX2</h2>
+                    <p><strong>Опис:</strong> UltraX2 - це ігрова миша, що поєднує в собі стильний дизайн, високу продуктивність та зручність. Її легка вага та висока точність роблять її ідеальною для e-sports.</p>
+                    <p><strong>Характеристики:</strong></p>
+                    <ul>
+                        <li>Тип сенсора: Оптичний</li>
+                        <li>Максимальне DPI: 14000</li>
+                        <li>Кількість програмованих кнопок: 7</li>
+                        <li>Тип підключення: Бездротове (Bluetooth та 2.4GHz)</li>
+                        <li>Час роботи від батареї: до 60 годин</li>
+                        <li>Підсвітка: 16.8 млн кольорів RGB</li>
+                    </ul>
+                    <p><strong>Інформація про доставку:</strong> Безкоштовна доставка. Прибуття протягом 2-4 робочих днів.</p>
+                    <button onclick="addToCard(1)">Додати в кошик</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <p>Телефон: (044) 123-45-67</p>
+                <p>Email: info@onlineshop.com.ua</p>
+                <p>Адреса: Київ, вул. Хрещатик, 1</p>
+            </div>
+            <div class="footer-section">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="#">Доставка і оплата</a></li>
+                    <li><a href="#">Гарантія і повернення</a></li>
+                    <li><a href="#">Політика конфіденційності</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Соціальні мережі</h3>
+                <div class="social-links">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
